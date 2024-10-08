@@ -1,0 +1,54 @@
+<div class="w-full max-w-sm mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+  <h2 class="text-2xl font-semibold text-center mb-6">Login</h2>
+
+  <div class="space-y-4">
+    <div>
+      <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+      <input type="email" id="email" [(ngModel)]="email" placeholder="Enter your email"
+             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    </div>
+
+    <div>
+      <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+      <input type="password" id="password" [(ngModel)]="password" placeholder="Enter your password"
+             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    </div>
+
+    <button (click)="login()"
+            class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-200">
+      Login
+    </button>
+  </div>
+
+  <!-- Predefined account login buttons -->
+  <div class="mt-6 space-y-3">
+    <button (click)="loginWithPredefinedAccount('admin')"
+            class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none transition duration-200">
+      Login as Admin
+    </button>
+    <button (click)="loginWithPredefinedAccount('registrar')"
+            class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 focus:outline-none transition duration-200">
+      Login as Registrar
+    </button>
+    <button (click)="loginWithPredefinedAccount('accounting')"
+            class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 focus:outline-none transition duration-200">
+      Login as Accounting
+    </button>
+    <button (click)="loginWithPredefinedAccount('cashier')"
+            class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 focus:outline-none transition duration-200">
+      Login as Cashier
+    </button>
+  </div>
+
+  <!-- New buttons for navigating to Kiosk and Queue -->
+  <div class="mt-6 space-y-3">
+    <button (click)="navigateToKiosk()"
+            class="w-full bg-yellow-500 text-white py-2 rounded-lg hover:bg-yellow-600 focus:outline-none transition duration-200">
+      Go to Kiosk
+    </button>
+    <button (click)="navigateToQueue()"
+            class="w-full bg-teal-500 text-white py-2 rounded-lg hover:bg-teal-600 focus:outline-none transition duration-200">
+      Go to Queue
+    </button>
+  </div>
+</div>
